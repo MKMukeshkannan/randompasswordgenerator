@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Password Generator</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
-      <h2 class="title">Strong Password Generator</h2>
+      <h2 class="title">STRONG PASSWORD GENERATOR</h2>
 
       <div class="result">
         <div class="result__viewbox" id="result">CLICK GENERATE</div>
@@ -21,20 +27,20 @@
       </div>
 
       <div class="settings">
-        <span class="settings__title field-title">settings</span>
-        <div class="setting">
+        <span class="settings__title field-title">Settings</span>
+        <div class="settings_options">
           <input type="checkbox" id="uppercase" checked />
           <label for="uppercase">Include Uppercase</label>
         </div>
-        <div class="setting">
+        <div class="settings_options">
           <input type="checkbox" id="lowercase" checked />
           <label for="lowercase">Include Lowercase</label>
         </div>
-        <div class="setting">
+        <div class="settings_options">
           <input type="checkbox" id="number" checked />
           <label for="number">Include Numbers</label>
         </div>
-        <div class="setting">
+        <div class="settings_options">
           <input type="checkbox" id="symbol" />
           <label for="symbol">Include Symbols</label>
         </div>
