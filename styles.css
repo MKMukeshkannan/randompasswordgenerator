@@ -1,27 +1,36 @@
+* {
+    margin: 0;
+    padding:0;
+  }
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-style: solid;
     margin: 40px 0;
 	width: 400px;
 	height: 500px;
 	padding: 10px 25px;
-    border-radius: 10px;
-    background-color: #0348ffff;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.4px);
+    -webkit-backdrop-filter: blur(10.4px);
+    border: 1px solid rgba(255, 255, 255, 0.54);
 }
 
 body {
     font-family: 'Space Mono', monospace;
-    color: antiquewhite;
+    color: rgb(38, 36, 34);
     width: 100%;
 	height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #e9effbff;
-}
+    overflow: hidden;
+    background-image: linear-gradient(to right top, #3bffb1, #27ffbf, #11ffcd, #00ffd9, #00ffe4, #00fced, #00f8f4, #00f4fa, #1aecfe, #34e3ff, #4bdaff, #5fd1fb);}
 
 button{
     color: antiquewhite;
@@ -31,6 +40,7 @@ button{
     border-radius: 5px;
     padding: 10px;
     font-family: 'Space Mono', monospace;
+    cursor:pointer;
 
 }
 
@@ -78,3 +88,148 @@ input[type="checkbox"]:checked::after {
     display: block;
     background-color: #326bfb;
 }
+
+
+
+
+
+.nav {
+    padding: 0 20px;
+    align-self: start;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index:99;
+    height: 75px;
+    width: 100%;
+    background-color: #326bfb;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+
+
+  
+.center{
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  }
+  .center h1{
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+  }
+  .center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+  }
+  .txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  .txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+  }
+  .txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+  }
+  .txt_field input:focus ~ label,
+  .txt_field input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+  }
+  .txt_field input:focus ~ span::before,
+  .txt_field input:valid ~ span::before{
+    width: 100%;
+  }
+  #sub-button[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #2691d9;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+  }
+  #sub-button[type="submit"]:hover{
+    border-color: #2691d9;
+    transition: .5s;
+  }
+  .signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+  }
+  .signup_link a{
+    color: #2691d9;
+    text-decoration: none;
+  }
+  .signup_link a:hover{
+    text-decoration: underline;
+  }
+  
+  .error {
+    color : red;
+    font-size: 14px;
+
+  }
